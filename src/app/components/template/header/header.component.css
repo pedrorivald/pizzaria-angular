@@ -4,6 +4,7 @@
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .icon-header {
