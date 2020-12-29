@@ -5,3 +5,30 @@
 .example-tab-icon {
   margin-right: 8px;
 }
+
+.mat-card-pizza, .mat-card-bebida{
+  padding-top: 10px;
+  margin: 5px;
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+  border: none;
+}
+
+.pizza-header-image, .bebida-header-image {
+  background-image: url('../../../../assets/card/cardapio.svg');
+  background-size: 85%;
+  background-repeat: no-repeat;
+}
+
+.price {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
