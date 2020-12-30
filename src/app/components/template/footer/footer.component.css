@@ -14,3 +14,31 @@
 p > i {
   font-size: 1.5rem;
 }
+
+.fa-facebook {
+  color: #1877f2;
+}
+
+.fa-whatsapp-square {
+  color: #00e676;
+}
+
+.fa-instagram {
+  color: #ba33ac;
+}
+
+.fa-store {
+  color: #ff033c;
+}
+
+.fa-map-marker-alt {
+  color: green;
+}
+
+.fa-laptop-code {
+  color: darkslateblue;
+}
+
+.fa-github {
+  color: #333;
+}
