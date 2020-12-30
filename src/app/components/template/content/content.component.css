@@ -8,7 +8,8 @@
 
 .mat-card-pizza, .mat-card-bebida{
   padding-top: 10px;
-  margin: 5px;
+  margin: 10px;
+  margin-top: 30px;
 }
 
 .avatar {
@@ -21,6 +22,21 @@
   background-image: url('../../../../assets/card/cardapio.svg');
   background-size: 85%;
   background-repeat: no-repeat;
+}
+
+.img-bebida, .img-pizza {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.img-bebida img {
+  width: 60%;
+}
+
+.img-pizza img{
+  width: 95%;
 }
 
 .price {
