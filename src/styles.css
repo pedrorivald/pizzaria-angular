@@ -34,3 +34,7 @@ body {
 .txt-center{
   text-align: center;
 }
+
+.link-a {
+	text-decoration: none;
+}

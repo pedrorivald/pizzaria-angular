@@ -1,18 +1,40 @@
-.footer {
-  /* height: 80px; */
-  /* background-color: #fef; */
-
+.footer-content {
+  min-height: 120px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-.redes, .sobre, .local, .dev {
+.footer-content div{
+  width: 60%;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.footer-content div a {
+  color: #333;
+}
+
+.icon-title {
+  padding-right: 4px;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
   margin-top: 10px;
-  padding: 5px;
+  padding-top: 15px;
 }
 
-p > i {
-  font-size: 1.5rem;
+.redes p {
+  padding: 10px;
+}
+
+.redes a > i {
+  font-size: 1.8rem;
 }
 
 .fa-facebook {
@@ -41,4 +63,6 @@ p > i {
 
 .fa-github {
   color: #333;
+  padding: 5px;
+  font-size: 1.2rem;
 }
