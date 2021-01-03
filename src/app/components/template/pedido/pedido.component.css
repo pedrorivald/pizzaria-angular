@@ -1,0 +1,36 @@
+.pedido {
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+
+  z-index: 100;
+}
+
+.pedido-btn {
+  width: 140px;
+  height: 50px;
+
+  border-radius: 30px;
+
+  background-color: #ff033c;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.pedido-btn:hover{
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 600px) {
+  .pedido-btn {
+    width: 120px;
+    height: 40px;
+
+    /* border: 1px solid #ffff8c; */
+    border-radius: 20px;
+
+    background-color: #ff033c;
+    color: #fff;
+    font-size: 0.8rem;
+  }
+}
