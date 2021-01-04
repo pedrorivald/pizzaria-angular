@@ -1,0 +1,47 @@
+h2 {
+  color: #333;
+}
+
+table {
+  width: 60vw;
+}
+
+table th {
+  text-align: center;
+}
+
+table td {
+  text-align: center;
+}
+
+tr.mat-footer-row {
+  font-weight: bold;
+}
+
+.btn-dialog {
+  display: flex;
+  justify-content: flex-end;
+  color: #333;
+}
+
+.btn-dialog button {
+  background-color: #ffff8c;
+}
+
+.dialog-icon {
+  padding-bottom: 3px;
+}
+
+@media screen and (max-width: 600px) {
+  .btn-dialog{
+    justify-content: center;
+  }
+
+  .btn-dialog button .span-icon {
+    display: none;
+  }
+
+  button .dialog-icon {
+    padding-right: 0;
+  }
+}

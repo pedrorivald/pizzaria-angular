@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,9 +20,15 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatTableModule} from '@angular/material/table';
 
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { PedidoDialogComponent } from './components/template/pedido/pedido-dialog/pedido-dialog.component';
+
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common'
+
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -46,9 +52,14 @@ import { PedidoDialogComponent } from './components/template/pedido/pedido-dialo
     MatBadgeModule, 
     MatDialogModule,
     MatButtonToggleModule,
-    ScrollingModule
+    ScrollingModule,
+    MatTableModule
   ],
-  providers: [],
+  providers: [{
+      provide: LOCALE_ID,
+      useValue: 'pt-BR'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
