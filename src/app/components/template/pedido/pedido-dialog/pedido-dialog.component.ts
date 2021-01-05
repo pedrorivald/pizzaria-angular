@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PedidoFormComponent } from '../pedido-form/pedido-form.component';
 import {MatDialog} from '@angular/material/dialog';
+import { PedidoService } from '../pedido.service';
 
 export interface Transaction {
   item: string;
@@ -15,7 +16,7 @@ export interface Transaction {
 })
 export class PedidoDialogComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private pedidoService: PedidoService) { }
 
   ngOnInit(): void {
   }
@@ -33,10 +34,21 @@ export class PedidoDialogComponent implements OnInit {
     return this.transactions.map(t => t.price).reduce((acc, value) => acc + value, 0);
   }
 
-  openPedidoForm() {
+  openPedidoForm(): void{
     const dialogRef = this.dialog.open(PedidoFormComponent);
+    let pedido = '*Pedido:*\n';
 
     dialogRef.afterClosed().subscribe(result => {});
+
+    this.transactions.forEach(obj => {
+      pedido += `*${obj.item}* -> R$${obj.price}\n`;
+    });
+
+    pedido += `*Total:* R$${this.getTotalPrice()}`;
+
+    let pedidoURI = encodeURIComponent(pedido);
+
+    this.pedidoService.pedidoURI = pedidoURI;
   }
 
 }

@@ -22,20 +22,11 @@ export class PedidoFormComponent implements OnInit {
   }
 
   concluirPedido(): void {
-    let nomeEncode = encodeURIComponent(this.nome);
-    let bairroEncode = encodeURIComponent(this.bairro);
-    let ruaEncode = encodeURIComponent(this.rua);
-    let numeroEncode = encodeURIComponent(this.numero);
-    let complementoEncode = encodeURIComponent(this.complemento);
-    let trocoEncode = encodeURIComponent(this.troco);
+    let texto = `*Nome:* ${this.nome};\n*Bairro:* ${this.bairro};\n*Rua:* ${this.rua};\n*Número:* ${this.numero};\n*Complemento:* ${this.complemento};\n*Troco para:* ${this.troco}\n\n`;
+    let textoURI = encodeURIComponent(texto);
 
-    let texto = `Nome:%20${nomeEncode}%2C
-    Bairro:%20${bairroEncode}%2C
-    Rua:%20${ruaEncode}%2C
-    Número:%20${numeroEncode}%2C
-    Complemento:%20${complementoEncode}%2C
-    Troco%20para:%20${trocoEncode}`;
-    
-    window.location.href = `https://api.whatsapp.com/send?phone=5585996455918&text=${texto}`;
+    this.pedidoService.formularioURI = textoURI;
+
+    this.pedidoService.msgWhatsapp();
   }
 }
