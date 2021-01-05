@@ -1,0 +1,55 @@
+<h2 mat-dialog-title class="txt-center">Formulário de Pedido</h2>
+<mat-dialog-content class="mat-typography">
+  <form>
+    <p>
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput>
+      </mat-form-field>   
+    </p>
+    <p>
+      <mat-form-field>
+        <mat-label>Bairro</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <mat-label>Rua</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field class="numero">
+        <mat-label>Número</mat-label>
+        <input matInput>
+      </mat-form-field>
+    
+      <mat-form-field class="complemento">
+        <mat-label>Complemento</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field>
+        <mat-label>Troco para?</mat-label>
+        <input matInput>
+      </mat-form-field>
+    </p>
+    
+  </form>
+</mat-dialog-content>
+  
+<mat-dialog-actions class="btn-dialog">
+  <button mat-raised-button [mat-dialog-close]="true">
+    <mat-icon class="color-pink dialog-icon">shopping_cart</mat-icon>
+    <span>Concluir</span>
+  </button>
+
+  <button mat-raised-button mat-dialog-close>
+    <mat-icon class="color-pink dialog-icon">cancel</mat-icon>
+    <span class="span-icon">Fechar</span>
+  </button>
+</mat-dialog-actions>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PedidoFormComponent } from '../pedido-form/pedido-form.component';
+import {MatDialog} from '@angular/material/dialog';
 
 export interface Transaction {
   item: string;
@@ -13,7 +15,7 @@ export interface Transaction {
 })
 export class PedidoDialogComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -29,6 +31,12 @@ export class PedidoDialogComponent implements OnInit {
 
   getTotalPrice() {
     return this.transactions.map(t => t.price).reduce((acc, value) => acc + value, 0);
+  }
+
+  openPedidoForm() {
+    const dialogRef = this.dialog.open(PedidoFormComponent);
+
+    dialogRef.afterClosed().subscribe(result => {});
   }
 
 }

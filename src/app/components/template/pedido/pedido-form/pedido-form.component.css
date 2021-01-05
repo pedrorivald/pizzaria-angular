@@ -1,21 +1,21 @@
-h2 {
-  color: #333;
+mat-form-field {
+  width: 100%;
 }
 
-table {
-  width: 60vw;
+mat-label {
+	color: #ff033c;
 }
 
-table th {
-  text-align: center;
+.mat-form-field-subscript-wrapper{
+	background-color: #ff033c;
 }
 
-table td {
-  text-align: center;
+.numero {
+  width: 30%;
 }
 
-tr.mat-footer-row {
-  font-weight: bold;
+.complemento {
+  width: 70%;
 }
 
 .btn-dialog {

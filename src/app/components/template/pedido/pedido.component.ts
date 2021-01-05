@@ -13,8 +13,6 @@ export class PedidoComponent {
   openPedido() {
     const dialogRef = this.dialog.open(PedidoDialogComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    dialogRef.afterClosed().subscribe(result => {});
   }
 }

@@ -7,6 +7,10 @@ body {
   
 }
 
+.mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #ff033c;
+}
+
 .color-white {
   color: #fff;
 }

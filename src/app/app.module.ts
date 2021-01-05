@@ -21,12 +21,15 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTableModule} from '@angular/material/table';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { PedidoDialogComponent } from './components/template/pedido/pedido-dialog/pedido-dialog.component';
 
 import localePt from '@angular/common/locales/pt';
-import { registerLocaleData } from '@angular/common'
+import { registerLocaleData } from '@angular/common';
+import { PedidoFormComponent } from './components/template/pedido/pedido-form/pedido-form.component'
 
 registerLocaleData(localePt);
 
@@ -38,6 +41,7 @@ registerLocaleData(localePt);
     FooterComponent,
     PedidoComponent,
     PedidoDialogComponent,
+    PedidoFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +57,10 @@ registerLocaleData(localePt);
     MatDialogModule,
     MatButtonToggleModule,
     ScrollingModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule,
+    MatFormFieldModule
+    
   ],
   providers: [{
       provide: LOCALE_ID,
