@@ -18,6 +18,10 @@
   border: none;
 }
 
+.subtitle {
+  height: 40px;
+}
+
 .pizza-header-image, .bebida-header-image {
   background-image: url('../../../../assets/card/cardapio.svg');
   background-size: 85%;
@@ -27,8 +31,10 @@
 .img-bebida, .img-pizza {
   display: flex;
   justify-content: center;
+  align-self: center;
   margin-top: 10px;
   border-radius: 5px;
+  height: 60%;
 }
 
 .img-bebida img {
@@ -49,6 +55,20 @@
   justify-content: center;
 }
 
-/* .btn-add {
-  margin-top: 40px;
-} */
+.spinner {
+  width: 100%;
+  height: 60vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 960 -> 2 colunas */
+/* 600 -> 1 coluna */
+
+@media screen and (max-width: 600px) {
+  .subtitle {
+    height: auto;
+  }
+}

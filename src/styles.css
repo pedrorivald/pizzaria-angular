@@ -35,6 +35,10 @@ body {
   background-color: #ff033c;
 }
 
+.mat-progress-spinner circle, .mat-spinner circle {
+  stroke: #ff033c;
+}
+
 .txt-center{
   text-align: center;
 }

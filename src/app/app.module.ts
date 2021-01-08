@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { PedidoDialogComponent } from './components/template/pedido/pedido-dialog/pedido-dialog.component';
@@ -61,7 +63,9 @@ registerLocaleData(localePt);
     MatTableModule,
     MatInputModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    MatProgressSpinnerModule
   ],
   providers: [{
       provide: LOCALE_ID,
