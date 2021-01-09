@@ -23,14 +23,13 @@
 
 @media screen and (max-width: 600px) {
   .pedido-btn {
-    width: 120px;
-    height: 40px;
+    width: 130px;
+    height: 45px;
 
-    /* border: 1px solid #ffff8c; */
     border-radius: 20px;
 
     background-color: #ff033c;
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
