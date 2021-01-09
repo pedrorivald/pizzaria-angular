@@ -1,27 +1,33 @@
-# Pizzaria
+<h1>
+  <center>
+    Pizza<span style="color: #ff033c">Delivery</span>
+  </center>
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
+<center>
+  <img src="./github/pizza.svg" width="60"></img>
 
-## Development server
+  <p>Aplicação de delivery para pizzarias, feita em Angular!</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  Acessar: <a href=" https://pizzadelivery.vercel.app"> https://pizzadelivery.vercel.app</a>
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## :hammer: **Tecnologias Usadas** :wrench:
+  ![Angular](https://img.shields.io/badge/-Angular-e00000?style=flat-square&logo=Angular)
+  ![TypeScript](https://img.shields.io/badge/-TypeScript-black?style=flat-square&logo=typescript)
+  ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+  ![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript)
+  ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3)
 
-## Build
+  ## :iphone: Mobile
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+  <img src="./github/interface.gif" width="350"></img>
+  
+  ## :desktop_computer: Desktop
 
-## Running unit tests
+  <img src="./github/desktop.png" width="350"></img>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+</center>
