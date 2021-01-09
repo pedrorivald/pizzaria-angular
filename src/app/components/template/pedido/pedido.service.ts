@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 export interface Transaction {
   item: string;
   price: number;
+  num: number;
 }
 
 @Injectable({
@@ -18,7 +19,7 @@ export class PedidoService {
   constructor() { }
 
   getPedidoValues(item: string, price: number) {
-    this.transactions.push({item: item, price: price});
+    this.transactions.push({item: item, price: price, num: this.transactions.length});
   }
 
 }

@@ -19,10 +19,10 @@
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef> Excluir </th>
       <td mat-cell *matCellDef="let transaction">
-        <mat-icon class="color-pink">remove_circle</mat-icon>
+        <mat-icon class="color-pink excluir" (click)="removerItem(transaction.num)" mat-dialog-close>remove_circle</mat-icon>
       </td>
       <td mat-footer-cell *matFooterCellDef>
-        <mat-icon class="color-pink">delete</mat-icon>
+        <mat-icon class="color-pink excluir" (click)="removerPedido()" mat-dialog-close>delete</mat-icon>
       </td>
     </ng-container>
   

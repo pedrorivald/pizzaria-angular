@@ -18,7 +18,7 @@ export class PedidoDialogComponent implements OnInit {
   }
 
   displayedColumns: string[] = ['item', 'price', 'action'];
-  
+
   getTotalPrice() {
     return this.transactions.map(t => t.price).reduce((acc, value) => acc + value, 0);
   }
@@ -38,6 +38,14 @@ export class PedidoDialogComponent implements OnInit {
     let pedidoURI = encodeURIComponent(pedido);
 
     this.pedidoService.pedidoURI = pedidoURI;
+  }
+
+  removerItem(num: number) {
+    this.pedidoService.transactions.splice(num, 1);
+  }
+
+  removerPedido() {
+    this.pedidoService.transactions = [];
   }
 
 }

@@ -28,6 +28,10 @@ tr.mat-footer-row {
   background-color: #ffff8c;
 }
 
+.excluir {
+  cursor: pointer;
+}
+
 /*.dialog-icon {
   padding-bottom: 3px;
 }*/
