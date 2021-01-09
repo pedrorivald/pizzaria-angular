@@ -1,5 +1,10 @@
 import { Injectable } from '@angular/core';
 
+export interface Transaction {
+  item: string;
+  price: number;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -8,9 +13,12 @@ export class PedidoService {
   pedidoURI: string = '';
   formularioURI: string = '';
 
+  transactions: Transaction[] = [];
+
   constructor() { }
 
-  msgWhatsapp(): void {
-    window.open(`https://api.whatsapp.com/send?phone=5585996455918&text=${this.formularioURI}${this.pedidoURI}`);
+  getPedidoValues(item: string, price: number) {
+    this.transactions.push({item: item, price: price});
   }
+
 }

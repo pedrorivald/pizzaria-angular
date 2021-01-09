@@ -1,4 +1,4 @@
-<mat-tab-group mat-align-tabs="center" class="content" *ngIf="pizzasArray; else loading">
+<mat-tab-group mat-align-tabs="center" class="content" *ngIf="pizzasArray.length > 0; else loading">
   <mat-tab>
     <ng-template mat-tab-label>
       <mat-icon class="example-tab-icon">local_pizza</mat-icon>
@@ -27,7 +27,7 @@
           </p>
 
           <mat-card-actions class="btn">
-            <button mat-raised-button class="bg-yellow color-gray btn-add">
+            <button mat-raised-button class="bg-yellow color-gray btn-add" (click)="addPizzaPedido(pizza.id)">
               <mat-icon class="color-pink">add_circle</mat-icon>
               Adicionar ao Pedido
             </button>
@@ -71,7 +71,7 @@
           </p>
 
           <mat-card-actions class="btn">
-            <button mat-raised-button class="bg-yellow color-gray">
+            <button mat-raised-button class="bg-yellow color-gray" (click)="addBebidaPedido(bebida.id)">
               <mat-icon class="color-pink">add_circle</mat-icon>
               Adicionar ao Pedido
             </button>

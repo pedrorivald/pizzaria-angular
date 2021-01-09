@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { PedidoService } from '../pedido/pedido.service';
 import { Bebida } from './bebida.model';
 import { Pizza } from './pizza.model';
 import { ProdutosService } from './produtos.service';
@@ -11,11 +11,10 @@ import { ProdutosService } from './produtos.service';
 })
 export class ContentComponent implements OnInit {
 
-  pizzasArray: Pizza[] | undefined;
-  bebidasArray: Bebida[] | undefined;
-  
+  pizzasArray: Pizza[] = [];
+  bebidasArray: Bebida[] = [];
 
-  constructor(private produtosService: ProdutosService) { }
+  constructor(private produtosService: ProdutosService, private pedidoService: PedidoService) { }
 
   ngOnInit(): void {
     this.getPizzas();
@@ -27,4 +26,21 @@ export class ContentComponent implements OnInit {
       this.bebidasArray = data.bebidas;
     });
   }
+
+  addPizzaPedido(id: number) {
+    this.pizzasArray.forEach((value)=> {
+      if(value.id === id){
+        this.pedidoService.getPedidoValues(value.name, value.price);
+      }
+    });
+  }
+
+  addBebidaPedido(id: number) {
+    this.bebidasArray.forEach((value)=> {
+      if(value.id === id){
+        this.pedidoService.getPedidoValues(`${value.name} ${value.volume}`, value.price);
+      }
+    });
+  }
 }
+

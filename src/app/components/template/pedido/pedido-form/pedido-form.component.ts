@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PedidoService } from '../pedido.service';
-// import { Form } from './form.model';
 
 @Component({
   selector: 'app-pedido-form',
@@ -25,8 +24,7 @@ export class PedidoFormComponent implements OnInit {
     let texto = `*Nome:* ${this.nome};\n*Bairro:* ${this.bairro};\n*Rua:* ${this.rua};\n*Número:* ${this.numero};\n*Complemento:* ${this.complemento};\n*Troco para:* ${this.troco}\n\n`;
     let textoURI = encodeURIComponent(texto);
 
-    this.pedidoService.formularioURI = textoURI;
-
-    this.pedidoService.msgWhatsapp();
+    window.open(`https://api.whatsapp.com/send?phone=5585996455918&text=${textoURI}${this.pedidoService.pedidoURI}`);
+    
   }
 }
