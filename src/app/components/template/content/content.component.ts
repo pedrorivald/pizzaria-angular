@@ -31,6 +31,7 @@ export class ContentComponent implements OnInit {
     this.pizzasArray.forEach((value)=> {
       if(value.id === id){
         this.pedidoService.getPedidoValues(value.name, value.price);
+        this.pedidoService.openSnackBar('Pizza adicionada!');
       }
     });
   }
@@ -39,6 +40,7 @@ export class ContentComponent implements OnInit {
     this.bebidasArray.forEach((value)=> {
       if(value.id === id){
         this.pedidoService.getPedidoValues(`${value.name} ${value.volume}`, value.price);
+        this.pedidoService.openSnackBar('Bebida adicionada!');
       }
     });
   }

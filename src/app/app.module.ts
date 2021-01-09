@@ -26,6 +26,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import { PedidoDialogComponent } from './components/template/pedido/pedido-dialog/pedido-dialog.component';
@@ -65,7 +66,8 @@ registerLocaleData(localePt);
     MatFormFieldModule,
     FormsModule,
     HttpClientModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSnackBarModule
   ],
   providers: [{
       provide: LOCALE_ID,

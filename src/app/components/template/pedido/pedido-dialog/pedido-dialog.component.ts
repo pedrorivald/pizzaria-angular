@@ -42,10 +42,12 @@ export class PedidoDialogComponent implements OnInit {
 
   removerItem(num: number) {
     this.pedidoService.transactions.splice(num, 1);
+    this.pedidoService.openSnackBar('Item removido!');
   }
 
   removerPedido() {
     this.pedidoService.transactions = [];
+    this.pedidoService.openSnackBar('Pedido removido!');
   }
 
 }
