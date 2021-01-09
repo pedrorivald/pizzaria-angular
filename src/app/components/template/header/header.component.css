@@ -13,6 +13,7 @@ a {
 }
 
 .title {
+  font-family: 'Galindo', 'Roboto';
   margin-left: 15px;
   font-size: 1.5rem;
   color: #333;
